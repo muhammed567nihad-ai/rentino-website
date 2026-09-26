@@ -1,0 +1,1214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Metadata -->
+  <title>RENTINO — Premium Vehicle Rental | Drive Your Next Experience</title>
+  <meta name="description" content="Rent premium cars, luxury vehicles, SUVs, sports cars and modified vehicles with or without a professional driver. Instant online booking with RENTINO.">
+  <meta name="keywords" content="luxury car rental, rent bmw, rent mercedes, sports car rental, modified cars, supercar hire, chauffeur rental india">
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="RENTINO — Luxury Vehicle Rental">
+  <meta property="og:description" content="Next-generation luxury vehicle rental platform. Explore BMW, Mercedes-Benz, Audi, Porsche, Tesla & Modified Beasts.">
+  <meta property="og:type" content="website">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       PRELOADER / LOADING SCREEN
+       ======================================================================== -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-content">
+      <div class="preloader-logo">
+        <div class="preloader-badge">R</div>
+        <div class="preloader-title">RENTI<span>NO</span></div>
+      </div>
+      <div class="preloader-track">
+        <div class="preloader-bar" id="preloaderBar"></div>
+        <div class="preloader-car-icon" id="preloaderCarIcon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.85 7h10.29l1.04 3H5.81l1.04-3zM19 17H5v-4.66l.12-.34h13.77l.11.34V17z"/>
+            <circle cx="7.5" cy="14.5" r="1.5"/>
+            <circle cx="16.5" cy="14.5" r="1.5"/>
+          </svg>
+        </div>
+      </div>
+      <span class="preloader-subtitle">ENGINEERING LUXURY JOURNEYS...</span>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       CUSTOM CURSOR (DESKTOP)
+       ======================================================================== -->
+  <div class="custom-cursor" id="customCursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- ========================================================================
+       AMBIENT BACKGROUND PARTICLES & GLOW
+       ======================================================================== -->
+  <div class="ambient-background">
+    <div class="ambient-grid"></div>
+    <div class="ambient-glow-1"></div>
+    <div class="ambient-glow-2"></div>
+  </div>
+
+  <!-- ========================================================================
+       STICKY NAVIGATION BAR
+       ======================================================================== -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="#home" class="brand-logo">
+        <div class="logo-badge">
+          <svg viewBox="0 0 24 24">
+            <path d="M19 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3ZM10.5 17.5H7.5V6.5H12C14.21 6.5 16 8.29 16 10.5C16 12.02 15.15 13.34 13.92 14.02L16.5 17.5H13L10.5 14H10.5V17.5ZM10.5 11.5H12C12.55 11.5 13 11.05 13 10.5C13 9.95 12.55 9.5 12 9.5H10.5V11.5Z"/>
+          </svg>
+        </div>
+        <div class="logo-text">RENTI<span>NO</span></div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="nav-links">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#vehicles" class="nav-link">Vehicles</a>
+        <a href="#brands" class="nav-link">Brands</a>
+        <a href="#modified" class="nav-link">Modified</a>
+        <a href="#calculator" class="nav-link">Calculator</a>
+        <a href="#plans" class="nav-link">Rental Plans</a>
+        <a href="#services" class="nav-link">VIP & Services</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <!-- Favorites Trigger -->
+        <button class="nav-action-btn" id="favNavBtn" title="Saved Favorites">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+          </svg>
+          <span class="badge-counter" id="favBadgeCounter">0</span>
+        </button>
+
+        <!-- Comparison Trigger -->
+        <button class="nav-action-btn" id="compareNavBtn" title="Compare Vehicles">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="16 3 21 3 21 8"></polyline>
+            <line x1="4" y1="20" x2="21" y2="3"></line>
+            <polyline points="21 16 21 21 16 21"></polyline>
+            <line x1="15" y1="15" x2="21" y2="21"></line>
+            <line x1="4" y1="4" x2="9" y2="9"></line>
+          </svg>
+          <span class="badge-counter" id="compareBadgeCounter">0</span>
+        </button>
+
+        <a href="#vehicles" class="btn btn-primary btn-sm" style="display: none; @media(min-width: 768px){display: flex;}">Book A Car</a>
+
+        <!-- Hamburger for Mobile -->
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle Menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-nav-drawer" id="mobileNavDrawer">
+    <div class="mobile-nav-links">
+      <a href="#home">Home</a>
+      <a href="#vehicles">Vehicle Marketplace</a>
+      <a href="#brands">Premium Brands</a>
+      <a href="#bmw-section">BMW Collection</a>
+      <a href="#merc-section">Mercedes-Benz Collection</a>
+      <a href="#audi-section">Audi Collection</a>
+      <a href="#modified">RENTINO Modified</a>
+      <a href="#calculator">Rental Calculator</a>
+      <a href="#plans">Rental Plans</a>
+      <a href="#services">VIP Concierge</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="mobile-nav-footer">
+      <button class="btn btn-primary" onclick="openBookingModal('bmw-m4');">Reserve Vehicle</button>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       HERO SECTION
+       ======================================================================== -->
+  <section class="hero-section" id="home">
+    <div class="container">
+      <div class="hero-grid">
+        <!-- Left Hero Content -->
+        <div class="hero-content reveal-on-scroll">
+          <div class="hero-badge-tag">
+            <span class="pulse-dot"></span>
+            NEXT-GEN LUXURY MOBILITY
+          </div>
+          <h1 class="hero-title">
+            DRIVE YOUR <br>
+            <span class="highlight-yellow">NEXT EXPERIENCE</span>
+          </h1>
+          <p class="hero-description">
+            Premium cars. Flexible rentals. Extraordinary journeys. Experience the world's most prestigious automotive engineering with or without a professional chauffeur.
+          </p>
+          <div class="hero-cta-group">
+            <a href="#vehicles" class="btn btn-primary">
+              <span>EXPLORE VEHICLES</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <button class="btn btn-secondary" onclick="openBookingModal('bmw-m4');">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+              <span>BOOK A CAR</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Hero Visual Stage -->
+        <div class="hero-visual-stage reveal-on-scroll">
+          <div class="hero-backdrop-glow"></div>
+          <div class="hero-car-wrapper">
+            <img src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=1200&q=80" alt="RENTINO Luxury Supercar" class="hero-car-image">
+            <div class="hero-speed-lines"></div>
+          </div>
+
+          <!-- Floating Spec Badges -->
+          <div class="hero-floating-card hero-card-1">
+            <div class="hero-card-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+              </svg>
+            </div>
+            <div>
+              <div class="hero-card-label">0-100 KM/H</div>
+              <div class="hero-card-value">3.4 SECONDS</div>
+            </div>
+          </div>
+
+          <div class="hero-floating-card hero-card-2">
+            <div class="hero-card-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </div>
+            <div>
+              <div class="hero-card-label">HORSEPOWER</div>
+              <div class="hero-card-value">503 HP TWIN-TURBO</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Search Dashboard Panel -->
+      <div class="hero-search-dashboard reveal-on-scroll">
+        <form class="search-dashboard-form" id="heroSearchForm">
+          <!-- Pick-up Location -->
+          <div class="search-field">
+            <span class="search-label">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              Pick-up Location
+            </span>
+            <select class="search-select" id="heroPickupLocation">
+              <option value="Bangalore Airport / City">Bangalore (Aerodrome / Koramangala)</option>
+              <option value="Mumbai Airport / Bandra">Mumbai (Airport / BKC / Bandra)</option>
+              <option value="Delhi NCR / Gurgaon">Delhi NCR (Aerocity / Cyber City)</option>
+              <option value="Hyderabad VIP Terminal">Hyderabad (Jubilee Hills / GMR)</option>
+              <option value="Goa Luxury Chauffeur">Goa (Mopa / Dabolim / North Goa)</option>
+              <option value="Dubai International Concierge">Dubai (Downtown / Marina Delivery)</option>
+            </select>
+          </div>
+
+          <!-- Pick-up Date -->
+          <div class="search-field">
+            <span class="search-label">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+              Pick-up Date
+            </span>
+            <input type="date" class="search-input" id="heroPickupDate" value="2026-09-20">
+          </div>
+
+          <!-- Return Date -->
+          <div class="search-field">
+            <span class="search-label">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+              Return Date
+            </span>
+            <input type="date" class="search-input" id="heroReturnDate" value="2026-09-23">
+          </div>
+
+          <!-- Vehicle Type -->
+          <div class="search-field">
+            <span class="search-label">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+                <path d="M2 12h20"></path>
+              </svg>
+              Vehicle Category
+            </span>
+            <select class="search-select" id="heroVehicleType">
+              <option value="all">All Fleet Types</option>
+              <option value="Supercar">Supercar</option>
+              <option value="Sports">Sports Coupe</option>
+              <option value="Luxury">Ultra-Luxury Sedan</option>
+              <option value="SUV">Luxury SUV</option>
+              <option value="Electric">Electric Super-EV</option>
+              <option value="Modified">Modified Division</option>
+            </select>
+          </div>
+
+          <!-- Driver Option -->
+          <div class="search-field">
+            <span class="search-label">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+              Chauffeur Preference
+            </span>
+            <select class="search-select" id="heroDriverChoice">
+              <option value="without">Self-Drive Experience</option>
+              <option value="with">With Professional Chauffeur</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn btn-primary search-btn-submit">
+            <span>FIND CARS</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       PREMIUM BRANDS SHOWCASE
+       ======================================================================== -->
+  <section class="section-wrapper" id="brands">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-tag">ELITE AUTOMOTIVE MARQUES</span>
+        <h2 class="section-title">CHOOSE BY <span class="text-yellow">BRAND</span></h2>
+        <p class="section-subtitle">Select any prestigious manufacturer to instantly view all available luxury and sports rental models.</p>
+      </div>
+
+      <div class="brands-grid reveal-on-scroll" id="brandsGrid">
+        <!-- Injected via script.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       DEDICATED BRAND COLLECTIONS (BMW, MERCEDES, AUDI)
+       ======================================================================== -->
+  
+  <!-- BMW Collection -->
+  <section class="section-wrapper brand-showcase-section" id="bmw-section">
+    <div class="container">
+      <div class="brand-banner-header reveal-on-scroll">
+        <div>
+          <span class="section-tag">THE ULTIMATE DRIVING MACHINE</span>
+          <h2 class="section-title">BMW <span class="text-yellow">COLLECTION</span></h2>
+          <p class="section-subtitle">From the track-dominating M4 Competition to the silent grandeur of the all-electric i7.</p>
+        </div>
+        <div class="carousel-controls">
+          <button class="carousel-nav-btn" id="bmwPrevBtn" aria-label="Previous BMW">‹</button>
+          <button class="carousel-nav-btn" id="bmwNextBtn" aria-label="Next BMW">›</button>
+        </div>
+      </div>
+
+      <div class="horizontal-car-track" id="bmwCarouselTrack">
+        <!-- Dynamic cards injected via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Mercedes-Benz Collection -->
+  <section class="section-wrapper brand-showcase-section" id="merc-section">
+    <div class="container">
+      <div class="brand-banner-header reveal-on-scroll">
+        <div>
+          <span class="section-tag">THE BEST OR NOTHING</span>
+          <h2 class="section-title">MERCEDES-BENZ <span class="text-yellow">COLLECTION</span></h2>
+          <p class="section-subtitle">Discover handcrafted AMG beasts, iconic G 63 G-Wagons, and Maybach presidential luxury.</p>
+        </div>
+        <div class="carousel-controls">
+          <button class="carousel-nav-btn" id="mercPrevBtn" aria-label="Previous Mercedes">‹</button>
+          <button class="carousel-nav-btn" id="mercNextBtn" aria-label="Next Mercedes">›</button>
+        </div>
+      </div>
+
+      <div class="horizontal-car-track" id="mercCarouselTrack">
+        <!-- Dynamic cards injected via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Audi Collection -->
+  <section class="section-wrapper brand-showcase-section" id="audi-section">
+    <div class="container">
+      <div class="brand-banner-header reveal-on-scroll">
+        <div>
+          <span class="section-tag">VORSPRUNG DURCH TECHNIK</span>
+          <h2 class="section-title">AUDI <span class="text-yellow">COLLECTION</span></h2>
+          <p class="section-subtitle">Naturally aspirated V10 R8 supercars, blistering RS6 Avants, and quattro mastery.</p>
+        </div>
+        <div class="carousel-controls">
+          <button class="carousel-nav-btn" id="audiPrevBtn" aria-label="Previous Audi">‹</button>
+          <button class="carousel-nav-btn" id="audiNextBtn" aria-label="Next Audi">›</button>
+        </div>
+      </div>
+
+      <div class="horizontal-car-track" id="audiCarouselTrack">
+        <!-- Dynamic cards injected via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       RENTINO MODIFIED DIVISION (AGGRESSIVE SECTION)
+       ======================================================================== -->
+  <section class="section-wrapper modified-section" id="modified">
+    <div class="container">
+      <div class="modified-banner reveal-on-scroll">
+        <div>
+          <span class="modified-tag-badge">⚡ RENTINO MODIFIED</span>
+          <h2 class="modified-title">BUILT DIFFERENT. <br><span>DRIVEN DIFFERENT.</span></h2>
+          <p style="color: var(--text-secondary); font-size: 15px; margin-bottom: 20px;">
+            For drivers who crave raw horsepower, widebody aesthetics, valvetronic titanium exhausts, and track-tuned suspension setups.
+          </p>
+          <div class="modified-categories-grid">
+            <div class="mod-cat-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <span>Widebody Performance</span>
+            </div>
+            <div class="mod-cat-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <span>1000HP JDM Godzilla GT-R</span>
+            </div>
+            <div class="mod-cat-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <span>Liberty Walk European V8</span>
+            </div>
+            <div class="mod-cat-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <span>6x6 Apocalypse Off-Road</span>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=800&q=80" alt="RENTINO Modified" style="border-radius: 16px; border: 1px solid rgba(245, 183, 22, 0.4); box-shadow: 0 10px 40px rgba(0,0,0,0.8);">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       MAIN VEHICLE MARKETPLACE & LIVE FILTER SYSTEM
+       ======================================================================== -->
+  <section class="section-wrapper" id="vehicles">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-tag">COMPLETE SHOWROOM</span>
+        <h2 class="section-title">FIND YOUR <span class="text-yellow">PERFECT RIDE</span></h2>
+        <p class="section-subtitle">Explore high-performance sports cars, presidential limousines, electric hyper-EVs, and expedition SUVs.</p>
+      </div>
+
+      <!-- Live Search & Filtering Panel -->
+      <div class="filter-control-panel reveal-on-scroll">
+        <div class="filter-top-row">
+          <!-- Live Search Bar -->
+          <div class="search-bar-live">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" id="liveSearchInput" placeholder="Search by model, brand, horsepower (e.g. BMW M4, Maybach, GT-R, Electric)...">
+          </div>
+
+          <!-- Category Chips -->
+          <div class="category-chips-scroll">
+            <button class="filter-chip active" data-category="All">All Fleet</button>
+            <button class="filter-chip" data-category="Supercar">Supercar</button>
+            <button class="filter-chip" data-category="Sports">Sports</button>
+            <button class="filter-chip" data-category="Luxury">Luxury Sedan</button>
+            <button class="filter-chip" data-category="SUV">Luxury SUV</button>
+            <button class="filter-chip" data-category="Electric">Electric EV</button>
+            <button class="filter-chip" data-category="Off-Road">Off-Road</button>
+            <button class="filter-chip" data-category="Modified">Modified</button>
+          </div>
+        </div>
+
+        <!-- Advanced Filter Dropdowns -->
+        <div class="filter-dropdowns-row">
+          <div class="dropdown-filter">
+            <select class="dropdown-select" id="priceFilterSelect">
+              <option value="all">Price: All Tiers</option>
+              <option value="under15k">Under ₹15,000 / Day</option>
+              <option value="15k-25k">₹15,000 – ₹25,000 / Day</option>
+              <option value="25k-40k">₹25,000 – ₹40,000 / Day</option>
+              <option value="above40k">₹40,000+ / Day (Supercar Tier)</option>
+            </select>
+          </div>
+
+          <div class="dropdown-filter">
+            <select class="dropdown-select" id="transFilterSelect">
+              <option value="all">Transmission: All</option>
+              <option value="Automatic">Automatic (Dual-Clutch / Steptronic)</option>
+              <option value="Manual">Manual (Track Stick)</option>
+            </select>
+          </div>
+
+          <div class="dropdown-filter">
+            <select class="dropdown-select" id="fuelFilterSelect">
+              <option value="all">Fuel Type: All</option>
+              <option value="Petrol">Petrol (Twin-Turbo / V8 / V10)</option>
+              <option value="Electric">Pure Electric (EV)</option>
+              <option value="Hybrid">Performance Hybrid</option>
+            </select>
+          </div>
+
+          <button class="filter-reset-btn" id="resetFiltersBtn">Reset Filters</button>
+          
+          <div style="font-family: var(--font-mono); font-size: 13px; color: var(--primary-yellow);" id="vehicleCountBadge">
+            Showing Vehicles...
+          </div>
+        </div>
+      </div>
+
+      <!-- Vehicle Grid -->
+      <div class="vehicles-grid" id="vehiclesGrid">
+        <!-- Injected via script.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       RENTAL DURATION CALCULATOR & DRIVER SELECTION
+       ======================================================================== -->
+  <section class="section-wrapper" id="calculator">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-tag">LIVE COST CALCULATOR</span>
+        <h2 class="section-title">CUSTOMIZE YOUR <span class="text-yellow">RENTAL</span></h2>
+        <p class="section-subtitle">Select your desired rental duration, choose chauffeur or self-drive, and review instant transparent pricing.</p>
+      </div>
+
+      <div class="rental-calculator-panel reveal-on-scroll">
+        <!-- Left Options Form -->
+        <div>
+          <div class="calc-step-title">1. Choose Vehicle</div>
+          <div style="margin-bottom: 24px;">
+            <select class="form-select" id="calcCarSelect" style="width: 100%; padding: 14px; font-weight: 700; background: rgba(255,255,255,0.06);">
+              <!-- Injected via script.js -->
+            </select>
+          </div>
+
+          <div class="calc-step-title">2. Select Rental Duration</div>
+          <div class="duration-selector-row">
+            <button class="duration-btn active" data-days="1">
+              <span>1 DAY</span>
+              <span class="duration-discount">Standard</span>
+            </button>
+            <button class="duration-btn" data-days="2">
+              <span>2 DAYS</span>
+              <span class="duration-discount">Weekend</span>
+            </button>
+            <button class="duration-btn" data-days="3">
+              <span>3 DAYS</span>
+              <span class="duration-discount">Popular</span>
+            </button>
+            <button class="duration-btn" data-days="7">
+              <span>7 DAYS</span>
+              <span class="duration-discount">10% OFF</span>
+            </button>
+            <button class="duration-btn" data-days="14">
+              <span>14 DAYS</span>
+              <span class="duration-discount">18% OFF</span>
+            </button>
+          </div>
+
+          <div class="calc-step-title">3. Chauffeur vs Self-Drive Experience</div>
+          <div class="driver-options-grid">
+            <div class="driver-card-select" data-driver-mode="with">
+              <div class="driver-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+              </div>
+              <div class="driver-card-title">WITH CHAUFFEUR</div>
+              <p class="driver-card-desc">Trained executive driver. Relax in the rear seat with zero driving liability.</p>
+              <ul class="driver-card-features">
+                <li>✓ Professional uniform</li>
+                <li>✓ Real-time navigation</li>
+                <li>✓ Fuel assistance</li>
+              </ul>
+            </div>
+
+            <div class="driver-card-select selected" data-driver-mode="without">
+              <div class="driver-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+              </div>
+              <div class="driver-card-title">SELF DRIVE</div>
+              <p class="driver-card-desc">Take full command of the steering wheel. Unrestricted luxury driving freedom.</p>
+              <ul class="driver-card-features">
+                <li>✓ 100% Driving control</li>
+                <li>✓ Instant key handover</li>
+                <li>✓ Zero chauffeur fee</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Cost Receipt Summary -->
+        <div class="calc-summary-receipt">
+          <div class="receipt-header">
+            <div class="receipt-title">Rental Estimation</div>
+            <div class="receipt-car-name" id="calcCarName">BMW M4 Competition</div>
+          </div>
+
+          <div class="receipt-rows">
+            <div class="receipt-row">
+              <span>Base Daily Rental <small id="calcDaysLabel">(1 Day)</small>:</span>
+              <strong id="calcBasePrice">₹18,000</strong>
+            </div>
+
+            <div class="receipt-row discount-row" id="calcDiscountRow" style="display: none;">
+              <span>Duration Savings:</span>
+              <strong id="calcDiscountVal">-₹0</strong>
+            </div>
+
+            <div class="receipt-row">
+              <span>Chauffeur Service:</span>
+              <strong id="calcDriverVal">₹0 (Self-Drive)</strong>
+            </div>
+
+            <div class="receipt-row">
+              <span>Security Deposit:</span>
+              <span id="calcDepositVal">₹15,000 (Refundable)</span>
+            </div>
+
+            <div class="receipt-row">
+              <span>GST / Platform Fees (18%):</span>
+              <span id="calcTaxVal">₹3,240</span>
+            </div>
+
+            <div class="receipt-divider"></div>
+
+            <div class="receipt-total-row">
+              <span class="receipt-total-label">Estimated Total:</span>
+              <span class="receipt-total-val" id="calcGrandTotal">₹21,240</span>
+            </div>
+          </div>
+
+          <button class="btn btn-primary" style="width: 100%; margin-top: 10px;" onclick="openBookingModal(State.selectedCarForCalc.id);">
+            <span>PROCEED TO BOOKING</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       PREMIUM RENTAL PLANS
+       ======================================================================== -->
+  <section class="section-wrapper" id="plans">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-tag">FLEXIBLE MEMBERSHIPS</span>
+        <h2 class="section-title">PREMIUM RENTAL <span class="text-yellow">PLANS</span></h2>
+        <p class="section-subtitle">Choose from flexible one-day rentals to long-term monthly corporate fleets and VIP white-glove memberships.</p>
+      </div>
+
+      <div class="plans-grid reveal-on-scroll">
+        <!-- Daily Drive -->
+        <div class="plan-card">
+          <h3 class="plan-title">Daily Drive</h3>
+          <p class="plan-description">Ultimate flexibility for single-day journeys and photoshoots.</p>
+          <div class="plan-pricing">
+            <span class="plan-price">From ₹8,500</span>
+            <span class="plan-unit">/ 24 Hours</span>
+          </div>
+          <ul class="plan-features-list">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> 250 km included / day</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Doorstep vehicle delivery</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Comprehensive insurance</li>
+          </ul>
+          <button class="btn btn-secondary btn-sm" onclick="openBookingModal('bmw-3series');">Select Daily Plan</button>
+        </div>
+
+        <!-- Weekend Drive (Featured) -->
+        <div class="plan-card featured">
+          <span class="plan-badge">MOST POPULAR</span>
+          <h3 class="plan-title">Weekend Drive</h3>
+          <p class="plan-description">Friday to Monday getaway package with complimentary extra mileage.</p>
+          <div class="plan-pricing">
+            <span class="plan-price">12% OFF</span>
+            <span class="plan-unit">Weekend Package</span>
+          </div>
+          <ul class="plan-features-list">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> 750 km weekend allowance</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Free secondary driver</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> 24/7 Roadside concierge</li>
+          </ul>
+          <button class="btn btn-primary btn-sm" onclick="openBookingModal('bmw-m4');">Select Weekend Plan</button>
+        </div>
+
+        <!-- Business Executive -->
+        <div class="plan-card">
+          <h3 class="plan-title">Business Drive</h3>
+          <p class="plan-description">Chauffeur-driven executive sedans for corporate delegates and summits.</p>
+          <div class="plan-pricing">
+            <span class="plan-price">Corporate</span>
+            <span class="plan-unit">Custom Invoicing</span>
+          </div>
+          <ul class="plan-features-list">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> English-speaking chauffeur</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Onboard 5G Wi-Fi & refreshments</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Priority VIP support</li>
+          </ul>
+          <button class="btn btn-secondary btn-sm" onclick="openBookingModal('merc-sclass');">Select Business Plan</button>
+        </div>
+
+        <!-- VIP White Glove -->
+        <div class="plan-card">
+          <h3 class="plan-title">VIP Supercar</h3>
+          <p class="plan-description">Access our top-tier Ferrari, Porsche GT3, and 1000HP GT-R fleet.</p>
+          <div class="plan-pricing">
+            <span class="plan-price">From ₹42,000</span>
+            <span class="plan-unit">/ Exclusive Experience</span>
+          </div>
+          <ul class="plan-features-list">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Track & Highway access</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Private escort driver available</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Dedicated Concierge Manager</li>
+          </ul>
+          <button class="btn btn-secondary btn-sm" onclick="openBookingModal('porsche-911-gt3');">Select VIP Plan</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       VIP CONCIERGE & DRIVE ANYWHERE SERVICES
+       ======================================================================== -->
+  <section class="section-wrapper vip-section" id="services">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-tag">BEYOND EXPECTATIONS</span>
+        <h2 class="section-title">RENTINO <span class="text-yellow">VIP SERVICES</span></h2>
+        <p class="section-subtitle">Every rental is backed by unmatched luxury standards, airport escort services, and tailored fleet logistics.</p>
+      </div>
+
+      <div class="services-grid reveal-on-scroll">
+        <!-- Airport Tarmac Pickup -->
+        <div class="service-card">
+          <div class="service-icon-box">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.3c.4-.2.6-.6.5-1.1z"/>
+            </svg>
+          </div>
+          <h3 class="service-card-title">Airport Tarmac & Terminal Pickup</h3>
+          <p class="service-card-desc">Meet-and-greet chauffeur waiting at the VIP terminal with luggage assistance and chilled sparkling water.</p>
+        </div>
+
+        <!-- Royal Weddings & Events -->
+        <div class="service-card">
+          <div class="service-icon-box">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+            </svg>
+          </div>
+          <h3 class="service-card-title">Royal Wedding Motorcades</h3>
+          <p class="service-card-desc">Coordinated luxury fleets of Rolls Royce, Range Rovers, and G-Wagons for destination weddings and bridegroom grand entrances.</p>
+        </div>
+
+        <!-- Hotel & Villa Direct Delivery -->
+        <div class="service-card">
+          <div class="service-icon-box">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+              <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
+          </div>
+          <h3 class="service-card-title">Hotel & Residence Delivery</h3>
+          <p class="service-card-desc">Your reserved vehicle arrives freshly detailed and sanitized right at your luxury hotel porch or private residence.</p>
+        </div>
+
+        <!-- 24/7 VIP Concierge & Security -->
+        <div class="service-card">
+          <div class="service-icon-box">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+          </div>
+          <h3 class="service-card-title">Close Protection & Security Escort</h3>
+          <p class="service-card-desc">Optional armed/unarmed security convoy escort drivers for celebrity, diplomatic, and high-net-worth individual travel.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       ANIMATED STATISTICS COUNTER SECTION
+       ======================================================================== -->
+  <section class="stats-section" id="statsSection">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-number" id="statVehicles">500+</div>
+          <div class="stat-label">Luxury Vehicles</div>
+          <span class="stat-sub">Spanning 15+ Cities</span>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" id="statBrands">30+</div>
+          <div class="stat-label">Global Marques</div>
+          <span class="stat-sub">From BMW to Maybach</span>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" id="statRentals">10,000+</div>
+          <div class="stat-label">Completed Journeys</div>
+          <span class="stat-sub">100% On-Time Delivery</span>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" id="statSatisfaction">99%</div>
+          <div class="stat-label">Client Satisfaction</div>
+          <span class="stat-sub">Verified 5-Star Reviews</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       WHY CHOOSE RENTINO
+       ======================================================================== -->
+  <section class="section-wrapper" id="about">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-tag">THE RENTINO ADVANTAGE</span>
+        <h2 class="section-title">WHY CHOOSE <span class="text-yellow">RENTINO</span></h2>
+        <p class="section-subtitle">We merge top-echelon automotive engineering with frictionless digital booking and bespoke concierge services.</p>
+      </div>
+
+      <div class="why-rentino-grid reveal-on-scroll">
+        <div class="why-card">
+          <div class="why-number">01 / FLEET</div>
+          <h3 class="why-title">Factory-Pristine Vehicles</h3>
+          <p class="why-desc">All vehicles in our fleet are under 24 months old, rigorously maintained by authorized brand master technicians.</p>
+        </div>
+
+        <div class="why-card">
+          <div class="why-number">02 / PRICING</div>
+          <h3 class="why-title">Zero Hidden Surcharges</h3>
+          <p class="why-desc">Transparent pricing with insurance, taxes, and roadside support clearly outlined before you click reserve.</p>
+        </div>
+
+        <div class="why-card">
+          <div class="why-number">03 / FREEDOM</div>
+          <h3 class="why-title">With Or Without Chauffeur</h3>
+          <p class="why-desc">Enjoy thrilling personal driving freedom or sink into the back seat with an executive navigation chauffeur.</p>
+        </div>
+
+        <div class="why-card">
+          <div class="why-number">04 / BOOKING</div>
+          <h3 class="why-title">Instant Digital Handover</h3>
+          <p class="why-desc">Digital ID verification, paperless rental agreements, and contactless key delivery in under 60 minutes.</p>
+        </div>
+
+        <div class="why-card">
+          <div class="why-number">05 / SAFETY</div>
+          <h3 class="why-title">Comprehensive Coverage</h3>
+          <p class="why-desc">Every vehicle is backed by zero-depreciation insurance, 24/7 live telemetry monitoring, and roadside assistance.</p>
+        </div>
+
+        <div class="why-card">
+          <div class="why-number">06 / MODIFIED</div>
+          <h3 class="why-title">Exclusive Modified Division</h3>
+          <p class="why-desc">The only rental platform providing access to 1000HP widebody track-tuned monsters and custom super-trucks.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       CUSTOMER REVIEWS & TESTIMONIALS SLIDER
+       ======================================================================== -->
+  <section class="section-wrapper">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-tag">CLIENT VOICES</span>
+        <h2 class="section-title">WHAT OUR <span class="text-yellow">DRIVERS SAY</span></h2>
+        <p class="section-subtitle">Real feedback from business leaders, wedding planners, and automotive purists.</p>
+      </div>
+
+      <div class="testimonials-container reveal-on-scroll" id="testimonialsContainer">
+        <div class="testimonial-card-stage">
+          <div class="testimonial-quote-icon">“</div>
+          <p class="testimonial-text" id="tText">Loading testimonial...</p>
+          
+          <div class="testimonial-author-row">
+            <img src="" alt="Customer" class="author-avatar" id="tAvatar">
+            <div class="author-info">
+              <div class="author-name" id="tName">Name</div>
+              <div class="author-car" id="tCar">Vehicle</div>
+              <div style="font-size: 11px; color: var(--text-muted);" id="tRole">Role</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-dots">
+          <span class="t-dot active"></span>
+          <span class="t-dot"></span>
+          <span class="t-dot"></span>
+          <span class="t-dot"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       CONTACT & BOOKING ASSISTANCE
+       ======================================================================== -->
+  <section class="section-wrapper" id="contact" style="background: var(--bg-card); border-top: 1px solid var(--border-glass);">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-tag">24/7 VIP CONCIERGE</span>
+        <h2 class="section-title">GET IN TOUCH WITH <span class="text-yellow">RENTINO</span></h2>
+        <p class="section-subtitle">Have a custom inquiry, corporate fleet requirement, or destination wedding booking?</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;" class="reveal-on-scroll">
+        <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-glass); border-radius: 16px; padding: 30px;">
+          <h3 style="font-family: var(--font-display); font-size: 20px; color: #fff; margin-bottom: 12px;">Call Our Concierge</h3>
+          <p style="color: var(--text-secondary); margin-bottom: 20px; font-size: 14px;">Instant reservation support, chauffeur coordination, and custom supercar bookings.</p>
+          <div style="font-family: var(--font-display); font-size: 22px; font-weight: 800; color: var(--primary-yellow);">+91 98000 73684</div>
+          <span style="font-size: 12px; color: var(--text-muted);">Available 24 Hours / 7 Days a week</span>
+        </div>
+
+        <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-glass); border-radius: 16px; padding: 30px;">
+          <h3 style="font-family: var(--font-display); font-size: 20px; color: #fff; margin-bottom: 12px;">VIP Private Aviation & Airport Desk</h3>
+          <p style="color: var(--text-secondary); margin-bottom: 20px; font-size: 14px;">Tarmac deliveries and hotel motorcades across major domestic & international terminals.</p>
+          <div style="font-family: var(--font-display); font-size: 20px; font-weight: 800; color: #fff;">vip@rentino.luxury</div>
+          <span style="font-size: 12px; color: var(--text-muted);">Average response time: &lt; 15 mins</span>
+        </div>
+
+        <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-glass); border-radius: 16px; padding: 30px;">
+          <h3 style="font-family: var(--font-display); font-size: 20px; color: #fff; margin-bottom: 12px;">Flagship Showroom</h3>
+          <p style="color: var(--text-secondary); margin-bottom: 20px; font-size: 14px;">100 Ft Road, Indiranagar, Bangalore & Bandra Kurla Complex (BKC), Mumbai.</p>
+          <button class="btn btn-primary btn-sm" onclick="openBookingModal('bmw-m4');">Schedule Private Viewing</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       MEGA FOOTER
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: Brand Info -->
+        <div class="footer-brand-info">
+          <div class="brand-logo">
+            <div class="logo-badge">
+              <svg viewBox="0 0 24 24">
+                <path d="M19 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3ZM10.5 17.5H7.5V6.5H12C14.21 6.5 16 8.29 16 10.5C16 12.02 15.15 13.34 13.92 14.02L16.5 17.5H13L10.5 14H10.5V17.5ZM10.5 11.5H12C12.55 11.5 13 11.05 13 10.5C13 9.95 12.55 9.5 12 9.5H10.5V11.5Z"/>
+              </svg>
+            </div>
+            <div class="logo-text">RENTI<span>NO</span></div>
+          </div>
+          <p>
+            India's most premier animated luxury vehicle rental ecosystem. Experience hypercars, luxury sedans, grand tourers, and modified icons with seamless digital execution.
+          </p>
+          <div style="display: flex; gap: 12px; margin-top: 10px;">
+            <a href="#contact" class="nav-action-btn" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="#contact" class="nav-action-btn" aria-label="YouTube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+            </a>
+            <a href="#contact" class="nav-action-btn" aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Fleets -->
+        <div>
+          <div class="footer-col-title">Fleet Collections</div>
+          <div class="footer-links-list">
+            <a href="#bmw-section">BMW M & Luxury Series</a>
+            <a href="#merc-section">Mercedes-AMG & Maybach</a>
+            <a href="#audi-section">Audi RS Performance</a>
+            <a href="#vehicles">Porsche & Supercars</a>
+            <a href="#modified">RENTINO Modified Division</a>
+            <a href="#vehicles">Electric Hyper-EVs</a>
+          </div>
+        </div>
+
+        <!-- Col 3: Services -->
+        <div>
+          <div class="footer-col-title">VIP Services</div>
+          <div class="footer-links-list">
+            <a href="#services">Airport Tarmac Pickup</a>
+            <a href="#services">Royal Wedding Fleets</a>
+            <a href="#plans">Corporate Long-Term Lease</a>
+            <a href="#calculator">Chauffeur Service</a>
+            <a href="#services">Hotel Concierge Delivery</a>
+            <a href="#contact">Track Day Bookings</a>
+          </div>
+        </div>
+
+        <!-- Col 4: Quick Links -->
+        <div>
+          <div class="footer-col-title">Platform</div>
+          <div class="footer-links-list">
+            <a href="#home">Home Showroom</a>
+            <a href="#calculator">Rental Calculator</a>
+            <a href="#about">Why Rentino</a>
+            <a href="#contact">Contact Support</a>
+            <a href="#contact">Terms & Insurance</a>
+            <a href="#contact">Privacy Policy</a>
+          </div>
+        </div>
+
+        <!-- Col 5: VIP Newsletter -->
+        <div>
+          <div class="footer-col-title">VIP Club Newsletter</div>
+          <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 14px;">
+            Receive private notifications on newly added supercar arrivals and secret discount drops.
+          </p>
+          <form class="footer-newsletter-form" onsubmit="event.preventDefault(); showToast('Welcome to RENTINO VIP Club!');">
+            <input type="email" placeholder="Enter your VIP email..." class="footer-newsletter-input" required>
+            <button type="submit" class="btn btn-primary btn-sm">Subscribe VIP</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div>© 2026 RENTINO Technologies Inc. All rights reserved.</div>
+        <div style="display: flex; gap: 20px;">
+          <a href="#contact">Privacy</a>
+          <a href="#contact">Rental Terms</a>
+          <a href="#contact">Security Deposit FAQ</a>
+          <a href="#contact">Fleet Insurance</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       FLOATING ACTION DOCK & BACK TO TOP
+       ======================================================================== -->
+  <!-- Floating Comparison Dock -->
+  <div class="compare-dock" id="compareDock">
+    <div style="font-size: 13px; font-weight: 700; color: #fff;">Compare:</div>
+    <div class="compare-dock-slots" id="compareDockSlots">
+      <!-- 3 thumbnail slots injected via script.js -->
+    </div>
+    <button class="btn btn-primary btn-sm" id="openCompareDockBtn">Compare Now</button>
+    <button class="btn btn-secondary btn-sm" id="clearCompareDockBtn" title="Clear">✕</button>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top-btn" id="backToTopBtn" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- ========================================================================
+       MODALS SYSTEM
+       ======================================================================== -->
+  
+  <!-- 1. Vehicle Details Modal -->
+  <div class="modal-backdrop" id="vehicleDetailsModal">
+    <div class="modal-window">
+      <button class="modal-close-btn" aria-label="Close modal">✕</button>
+      <div id="vehicleDetailsContent">
+        <!-- Injected via script.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Booking Modal -->
+  <div class="modal-backdrop" id="bookingModal">
+    <div class="modal-window" style="max-width: 680px;">
+      <button class="modal-close-btn" aria-label="Close modal">✕</button>
+      <div style="padding: 30px;">
+        <span class="section-tag" style="margin-bottom: 8px;">DIGITAL VEHICLE RESERVATION</span>
+        <h2 class="section-title" style="font-size: 26px; margin-bottom: 6px;">Reserve Your <span class="text-yellow">Vehicle</span></h2>
+        <p style="color: var(--text-secondary); font-size: 14px;">Instant confirmation. Zero cancellation fees up to 24h prior.</p>
+
+        <form id="bookingForm">
+          <div class="booking-form-grid">
+            <div class="form-field">
+              <label>Full Name *</label>
+              <input type="text" class="form-input" id="bookFullName" placeholder="e.g. Vikramaditya Singhania" required>
+            </div>
+
+            <div class="form-field">
+              <label>Phone Number *</label>
+              <input type="tel" class="form-input" id="bookPhone" placeholder="+91 98765 43210" required>
+            </div>
+
+            <div class="form-field">
+              <label>Email Address *</label>
+              <input type="email" class="form-input" id="bookEmail" placeholder="client@domain.com" required>
+            </div>
+
+            <div class="form-field">
+              <label>Select Vehicle *</label>
+              <select class="form-select" id="bookCarSelect" required>
+                <!-- Populated via script.js -->
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label>Pick-up Location *</label>
+              <select class="form-select" id="bookLocation" required>
+                <option value="Bangalore VIP Airport Delivery">Bangalore VIP Airport Delivery</option>
+                <option value="Bangalore Central Showroom">Bangalore Central Showroom</option>
+                <option value="Mumbai Bandra / Airport">Mumbai Bandra / Airport</option>
+                <option value="Delhi NCR Luxury Concierge">Delhi NCR Luxury Concierge</option>
+                <option value="Goa Villa Direct Delivery">Goa Villa Direct Delivery</option>
+                <option value="Hyderabad Jubilee Hills">Hyderabad Jubilee Hills</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label>Pick-up Date *</label>
+              <input type="date" class="form-input" id="bookPickupDate" required>
+            </div>
+
+            <div class="form-field">
+              <label>Rental Duration *</label>
+              <select class="form-select" id="bookDuration">
+                <option value="1">1 Day (24 Hours)</option>
+                <option value="2">2 Days (48 Hours)</option>
+                <option value="3">3 Days (72 Hours)</option>
+                <option value="7">7 Days (Weekly Special - 10% Off)</option>
+                <option value="14">14 Days (Extended - 18% Off)</option>
+                <option value="30">30 Days (Monthly VIP Lease)</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label>Chauffeur Preference</label>
+              <select class="form-select" id="bookDriverOption">
+                <option value="without">Self-Drive Experience</option>
+                <option value="with">With Professional Chauffeur</option>
+              </select>
+            </div>
+
+            <div class="form-field form-group-full">
+              <label>Special Requests (Optional)</label>
+              <textarea class="form-textarea" rows="2" placeholder="e.g., Specific color preference, child seat, airport gate terminal meet..."></textarea>
+            </div>
+          </div>
+
+          <div style="margin-top: 24px; display: flex; gap: 14px;">
+            <button type="submit" class="btn btn-primary" style="flex: 1;">
+              <span>CONFIRM BOOKING</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </button>
+            <button type="button" class="btn btn-secondary" onclick="closeAllModals();">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Confirmation Voucher Modal -->
+  <div class="modal-backdrop" id="voucherModal">
+    <div class="modal-window" style="max-width: 540px;">
+      <button class="modal-close-btn" aria-label="Close modal">✕</button>
+      <div id="voucherContent">
+        <!-- Injected via script.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. Favorites Slide-out Modal -->
+  <div class="modal-backdrop" id="favoritesModal">
+    <div class="modal-window" style="max-width: 580px;">
+      <button class="modal-close-btn" aria-label="Close modal">✕</button>
+      <div style="padding: 30px;">
+        <span class="section-tag" style="margin-bottom: 8px;">SAVED FLEET</span>
+        <h2 class="section-title" style="font-size: 24px; margin-bottom: 20px;">My <span class="text-yellow">Favorites</span></h2>
+        <div id="favoritesListContent">
+          <!-- Injected via script.js -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. Vehicle Comparison Modal -->
+  <div class="modal-backdrop" id="compareModal">
+    <div class="modal-window" style="max-width: 1000px;">
+      <button class="modal-close-btn" aria-label="Close modal">✕</button>
+      <div style="padding: 30px;">
+        <span class="section-tag" style="margin-bottom: 8px;">HEAD-TO-HEAD ANALYSIS</span>
+        <h2 class="section-title" style="font-size: 26px; margin-bottom: 12px;">Compare <span class="text-yellow">Vehicles</span></h2>
+        <div id="compareTableContent">
+          <!-- Injected via script.js -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       TOAST NOTIFICATION ENGINE CONTAINER
+       ======================================================================== -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Core JavaScript Engine -->
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" width="200" height="60">
+  <defs>
+    <linearGradient id="yellowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFE066"/>
+      <stop offset="50%" stop-color="#F5B716"/>
+      <stop offset="100%" stop-color="#D49500"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Logo Badge -->
+  <rect x="5" y="10" width="40" height="40" rx="10" fill="url(#yellowGrad)" filter="url(#glow)"/>
+  <path d="M22 20 H30 C33.5 20 36 22 36 25 C36 27.5 34.5 29 32.5 29.5 L36.5 38 H32 L28.5 30.5 H26 V38 H22 V20 Z M26 23.5 V27.5 H30 C31.5 27.5 32.5 26.5 32.5 25.5 C32.5 24.5 31.5 23.5 30 23.5 H26 Z" fill="#050608"/>
+
+  <!-- Logo Typography -->
+  <text x="56" y="38" font-family="'Syne', sans-serif" font-weight="900" font-size="24" fill="#FFFFFF" letter-spacing="3">RENTI<tspan fill="url(#yellowGrad)">NO</tspan></text>
+</svg>
